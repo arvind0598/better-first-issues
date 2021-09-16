@@ -9,6 +9,8 @@ export type MinMaxString = MinMax<string>;
 
 export type SortOrder = 'asc' | 'desc';
 
+export type Empty = {};
+
 // REQUEST RESPONSE
 
 export type Response<T> = {

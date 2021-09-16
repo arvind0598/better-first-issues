@@ -1,14 +1,14 @@
-import { FC } from "react";
-import { useRouter } from 'next/router'
-import { Anchor, Box, Button, Header, Heading } from "grommet";
-import { Github } from "grommet-icons";
-import useResponsiveContext from "../../hooks/use-responsive-context";
+import { FC } from 'react';
+import { useRouter } from 'next/router';
+import {
+  Anchor, Box, Header, Heading,
+} from 'grommet';
+import useResponsiveContext from '../../hooks/use-responsive-context';
 
 const Navbar: FC<{}> = () => {
   const { isMobile } = useResponsiveContext();
-  const buttonLabel = isMobile ? "" : "Start Here";
-  const headingLevel = isMobile ? "1" : "2";
-  const textAlign = isMobile ? "center" : "start"
+  const headingLevel = isMobile ? '1' : '2';
+  const textAlign = isMobile ? 'center' : 'start';
   const router = useRouter();
 
   const followLink = (href: string) => router.push(href, undefined, { shallow: true });
@@ -17,14 +17,14 @@ const Navbar: FC<{}> = () => {
     if (isMobile) return null;
     return (
       <Box flex direction="row" justify="end" align="center">
-        <Anchor label="Random" onClick={() => { }} margin={{ horizontal: "medium" }} />
-        <Anchor label="About" onClick={() => followLink('/about')} margin={{ horizontal: "medium" }} />
+        <Anchor label="Random" onClick={() => { }} margin={{ horizontal: 'medium' }} />
+        <Anchor label="About" onClick={() => followLink('/about')} margin={{ horizontal: 'medium' }} />
       </Box>
     );
-  }
+  };
 
   return (
-    <Header pad="medium" justify="evenly" direction="row" >
+    <Header pad="medium" justify="evenly" direction="row">
       <Box flex>
         <Heading level={headingLevel} textAlign={textAlign} onClick={() => followLink('/')} style={{ cursor: 'pointer' }}>Better First Issues</Heading>
       </Box>
@@ -33,6 +33,6 @@ const Navbar: FC<{}> = () => {
       }
     </Header>
   );
-}
+};
 
 export default Navbar;

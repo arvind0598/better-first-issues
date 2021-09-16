@@ -1,8 +1,9 @@
-import { FC, MouseEventHandler } from "react";
-import { useRouter } from 'next/router'
-import { Anchor, Box, Nav } from "grommet";
-import useResponsiveContext from "../../hooks/use-responsive-context";
-import { AppsRounded, CircleInformation, Icon, Search } from "grommet-icons";
+import { FC } from 'react';
+import { useRouter } from 'next/router';
+import { Anchor, Box, Nav } from 'grommet';
+import {
+  AppsRounded, CircleInformation, Search,
+} from 'grommet-icons';
 
 import styles from './navbar.module.scss';
 
@@ -12,9 +13,6 @@ type NavbarIconProps = {
 };
 
 const MobileNavbar: FC<{}> = () => {
-  const { isMobile } = useResponsiveContext();
-  const buttonLabel = isMobile ? "" : "Start Here";
-  const headingLevel = isMobile ? "1" : "2";
   const router = useRouter();
 
   const followLink = (href: string) => router.push(href, undefined, { shallow: true });
@@ -32,6 +30,6 @@ const MobileNavbar: FC<{}> = () => {
       </Nav>
     </Box>
   );
-}
+};
 
 export default MobileNavbar;

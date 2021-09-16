@@ -1,4 +1,4 @@
-import { ThemeType } from "grommet";
+import { ThemeType } from 'grommet';
 
 const theme: ThemeType = {
   global: {

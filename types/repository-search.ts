@@ -1,4 +1,6 @@
-import { MinMaxOrNum, MinMaxString, Response, SortOrder } from './utils';
+import {
+  MinMaxOrNum, MinMaxString, Response, SortOrder,
+} from './utils';
 
 export type RepositorySearchFilters = {
   followers?: MinMaxOrNum;
