@@ -55,6 +55,7 @@ const RepositoryCard = ({
       <Badge BadgeIcon={Network} text={forks} align="start" />
     </Box>
     <Box direction="row">
+      {/* @ts-ignore */}
       <Heading level="3" style={{ wordWrap: 'anywhere' }}>
         {fullName}
       </Heading>

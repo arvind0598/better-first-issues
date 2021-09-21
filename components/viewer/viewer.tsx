@@ -7,7 +7,7 @@ import styles from './viewer.module.scss';
 
 type Props = RepositorySearchData;
 
-type MasonryBreakpoints = Record<ScreenWidth, number> & { default: number};
+type MasonryBreakpoints = Record<ScreenWidth, number> & { default: number };
 
 const masonryBreakpoints: MasonryBreakpoints = {
   600: 1,
