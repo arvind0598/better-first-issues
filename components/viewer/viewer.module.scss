@@ -1,0 +1,10 @@
+.masonry {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    width: auto;
+}
+
+.column {
+    background-clip: padding-box;
+}

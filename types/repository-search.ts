@@ -3,6 +3,7 @@ import {
 } from './utils';
 
 export type RepositorySearchFilters = {
+  name?: string;
   followers?: MinMaxOrNum;
   forks?: MinMaxOrNum;
   stars?: MinMaxOrNum;
@@ -16,8 +17,8 @@ export type RepositorySort = 'stars' | 'forks';
 export type RepositorySearchParams = {
   sort?: RepositorySort;
   order?: SortOrder;
-  perPage: number;
-  page: number;
+  perPage?: number;
+  page?: number;
 };
 
 export type RepositorySearchRequest = {
@@ -31,10 +32,11 @@ export type RepositorySearchOutboundRequest = RepositorySearchParams & {
 
 export type Repository = {
   name: string;
-  owner: string;
+  description: string | null;
+  owner?: string | null;
   fullName: string;
   url: string;
-  language: string;
+  language: string | null;
   forks: number;
   openIssues: number;
   watchers: number;

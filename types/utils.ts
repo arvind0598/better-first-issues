@@ -11,6 +11,13 @@ export type SortOrder = 'asc' | 'desc';
 
 export type Empty = {};
 
+// LANGUAGE
+
+// this has way more but i don't really care for any of them at this stage.
+export type LanguageConfig = {
+  color: string;
+};
+
 // REQUEST RESPONSE
 
 export type Response<T> = {
