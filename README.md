@@ -1,34 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Better First Issues
+
+Allows Developers to better look for, and select their first open source
+contribution. You can also use this tool to just look for random repositories
+or issues that might fancy you.
+
+Visit the tool [here](http://better-first-issues.vercel.app/).
 
 ## Getting Started
 
-First, run the development server:
+These instructions will give you a copy of the project up and running on
+your local machine for development and testing purposes. See deployment
+for notes on deploying the project on a live system.
+
+### Prerequisites
+
+Requirements for the software and other tools to build, test and push.
+
+- [Node](https://nodejs.org/en/) - I use Node v16.6.2 but really
+  anything 12+ should work.
+
+### Installing
+
+Clone this repository to your machine and run
+
+```bash
+npm install
+```
+
+To start up the dev server, run this:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the tests
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+We have no tests :(
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Sample Tests
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+We'd like to add test cases. Check out the [issues](issues) to learn more.
 
-## Learn More
+### Style test
 
-To learn more about Next.js, take a look at the following resources:
+Check if the best practices and the right coding style has been used.
+Run an ```npm run lint``` to see if there's any styling errors.
+Also run ```npm run lint:fix``` to fix issues that can be auto-fixed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Note that the build process will fail if there are lint issues.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+NextJS works a bit differently to other JS dev-build cycles.
+To prepare for deployment, run this command:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This compiles and bundles the code into the **.next** folder.
+After this is done, run this command to start the production server.
+
+```bash
+npm run start
+```
+
+## Built With
+
+- [Contributor Covenant](https://www.contributor-covenant.org/) - Used
+    for the Code of Conduct
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
+of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
+available, see the [tags on this
+repository](https://github.com/arvind0598/better-first-issues/tags).
+
+## Authors
+
+See also the list of
+[contributors](https://github.com/arvind0598/better-first-issues/contributors)
+who participated in this project.
+
+## License
+
+This project is licensed under the [CC0 2.1 Universal](CODE_OF_CONDUCT.md)
+Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
+details
+
+## Acknowledgments
+
+- **Daren Sin** - *Created Good First Issues, the inspriation for this project* - [darensin01](https://github.com/darensin01)
+- **Billie Thompson** - *Provided README Template* - [PurpleBooth](https://github.com/PurpleBooth)
+- **Tom Boettger** - *Provided CONTRIBUTING Template* - [bttger](https://github.com/bttger)
