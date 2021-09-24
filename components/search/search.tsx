@@ -4,9 +4,23 @@ import { useState } from 'react';
 import useResponsiveContext from '../../hooks/use-responsive-context';
 
 type Props = {
+  /**
+   * This is a function that is called when the search is triggered.
+   */
   updateSearchTerm: (term: string) => void;
 };
 
+/**
+ * @summary Component to render the Search Box and accept user input.
+ *
+ * @description
+ * This component has a text box and a button, and that's the end of that story.
+ * It renders sizes slightly differently based on the screen size. It also has internal
+ * state to represent the text in the search input.
+ *
+ * @param {Props} props props
+ * @returns the component.
+ */
 const SearchForm = ({ updateSearchTerm }: Props) => {
   const { isMobile, isTablet } = useResponsiveContext();
   const [searchTerm, setSearchTerm] = useState('');

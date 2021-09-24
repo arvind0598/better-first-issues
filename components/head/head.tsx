@@ -5,6 +5,20 @@ type PageHeadProps = {
   title: string;
 };
 
+/**
+ * @summary Component for rendering the <head/> tag of the HTML page.
+ *
+ * @description
+ * This component renders the header on top of the HTML. This currently takes one
+ * parameter, the title of the page. Note that we should not be including fonts or
+ * stylesheets here, as that means it'll end up reloading that for each page.
+ *
+ * @todo
+ * Improve the tags here for better SEO.
+ *
+ * @param {PageHeadProps} props props
+ * @returns the component
+ */
 const PageHead: FC<PageHeadProps> = ({ title }) => (
   <Head>
     <title>{title}</title>
