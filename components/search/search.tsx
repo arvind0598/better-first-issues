@@ -1,6 +1,6 @@
 import { Box, Button, TextInput } from 'grommet';
 import { Search } from 'grommet-icons';
-import { useState } from 'react';
+import { KeyboardEventHandler, useState } from 'react';
 import useResponsiveContext from '../../hooks/use-responsive-context';
 
 type Props = {
@@ -31,6 +31,21 @@ const SearchForm = ({ updateSearchTerm }: Props) => {
     button: isSmaller ? '80%' : '20%',
   };
 
+  /**
+   * @summary This function allows for submitting text on enter.
+   *
+   * @description
+   * This function exists because there's no easy way to make the Box a Form, so
+   * we need to manually allow this.
+   *
+   * @param e event
+   */
+  const submitForm: KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === 'Enter') {
+      updateSearchTerm(searchTerm);
+    }
+  };
+
   return (
     <Box direction="column" pad={{ vertical: 'large' }} justify="center" align="center">
       <Box width={elementWidth.textInput} margin={{ vertical: 'medium' }}>
@@ -42,6 +57,7 @@ const SearchForm = ({ updateSearchTerm }: Props) => {
           placeholder={!isMobile && 'Search for an issue or a repository'}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyUp={submitForm}
         />
       </Box>
       <Button
