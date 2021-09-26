@@ -2,6 +2,10 @@ import Document, {
   Html, Head, Main, NextScript, DocumentContext,
 } from 'next/document';
 
+/**
+ * This is the document tag. Put the fonts and any other external stylesheets here.
+ * You could basically put anything except the title tag in this section.
+ */
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);

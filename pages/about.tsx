@@ -9,6 +9,14 @@ import useResponsiveContext from '../hooks/use-responsive-context';
 import MobileNavbar from '../components/navbar/navbar-mobile';
 import { Empty } from '../types/utils';
 
+/**
+ * This object determines how to split the screen between the "image" and the "text"
+ * for various screen sizes.
+ *
+ * @example
+ * On a large (l) screen, the image would take 1/3 of the screen width, and the text
+ * would occupy 2/3 of the screen.
+ */
 const columnsLayout: Record<string, string[]> = {
   xs: ['1'],
   s: ['1'],
@@ -17,6 +25,43 @@ const columnsLayout: Record<string, string[]> = {
   xl: ['1/2', '1/2'],
 };
 
+/**
+ * This set of Props just wants to know if we're rendering it on mobile.
+ */
+type BottomStickingNavbarProps = {
+  isMobile: boolean;
+};
+
+/**
+ * @summary Component to conditionally render the navbar at the bottom of the page.
+ *
+ * @description
+ * We return nothing if we're not on mobile. Otherwise, we add an empty box right before
+ * the navbar. The reason we do this is to ensure that the "fixed" navbar does not just
+ * straight up overlap over the text content.
+ *
+ * @param {BottomStickingNavbarProps} props props
+ * @returns the component.
+ */
+const BottomStickingNavbar: FC<BottomStickingNavbarProps> = ({ isMobile }) => {
+  if (!isMobile) return null;
+  return (
+    <>
+      <Box pad="large" />
+      <MobileNavbar />
+    </>
+  );
+};
+
+/**
+ * @summary Component to render the "About" Page.
+ *
+ * @description
+ * Shows an image and a short description about the project. Renders slightly
+ * differently on different screen sizes.
+ *
+ * @returns the component.
+ */
 const About: NextPage = () => {
   const { size, isMobile, isTablet } = useResponsiveContext();
   const isSmaller = isMobile || isTablet;
@@ -33,6 +78,24 @@ const About: NextPage = () => {
     vertical: 'xsmall',
   };
 
+  /**
+   * @summary Component to render a paragraph.
+   *
+   * @description
+   * The reason this exists within the About Component is that we want to use
+   * some of the props without having to pass it manually each time. The text itself
+   * is pretty straightforward.
+   *
+   * It uses "Empty" because there's an eslint rule that cries about stuff if we just
+   * use "{}" because we end up using the children parameter anyway.
+   *
+   * @todo
+   * As part of a larger revamp, we should move away from using FC. This is considered
+   * to be an antipattern. Explicitly passing children makes more sense.
+   *
+   * @param {Empty} props props
+   * @returns the component.
+   */
   const AboutParagraph: FC<Empty> = ({ children }) => {
     const fontSize = size === 'xl' ? 'xlarge' : 'large';
     return (
@@ -44,19 +107,9 @@ const About: NextPage = () => {
     );
   };
 
-  const BottomStickingNavbar: FC<{}> = () => {
-    if (!isMobile) return null;
-    return (
-      <>
-        <Box pad="large" />
-        <MobileNavbar />
-      </>
-    );
-  };
-
   return (
     <>
-      <PageHead title="First Issues" />
+      <PageHead title="First Issues | About" />
       <Navbar />
       <Box align="center" justify="center" direction="column" pad="large">
         {
@@ -81,7 +134,6 @@ const About: NextPage = () => {
               </AboutParagraph>
               <AboutParagraph>
                 This project is inspired by
-                {' '}
                 <Anchor label="Good First Issues" href="http://goodfirstissues.com/" />
                 , a similar project by Daren Sin.
               </AboutParagraph>
@@ -89,7 +141,7 @@ const About: NextPage = () => {
           </Grid>
         </Box>
       </Box>
-      <BottomStickingNavbar />
+      <BottomStickingNavbar isMobile={isMobile} />
     </>
   );
 };
