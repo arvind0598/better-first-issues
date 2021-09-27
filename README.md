@@ -90,7 +90,7 @@ who participated in this project.
 ## License
 
 This project is licensed under the [CC0 2.1 Universal](CODE_OF_CONDUCT.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
+Creative Commons License - see the [LICENSE](LICENSE.md) file for
 details
 
 ## Acknowledgments
