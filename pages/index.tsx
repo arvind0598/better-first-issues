@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
   const renderViewer = () => {
     if (isLoading) {
-      return <Box> Loading! </Box>;
+      return <Box> </Box>;
     }
 
     if (!data.success || !data.data) {

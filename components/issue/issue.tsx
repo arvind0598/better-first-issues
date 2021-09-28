@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * @summary Component to render a card displaying an issue.
  *
