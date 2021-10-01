@@ -1,8 +1,10 @@
 /* eslint-disable react/require-default-props */
 import {
-  Box, Heading, Paragraph, Text, Anchor, Button
+  Box, Heading, Paragraph, Text, Anchor, Button,
 } from 'grommet';
-import { Star, Network, Icon, LinkNext, View, RadialSelected } from 'grommet-icons';
+import {
+  Star, Network, Icon, LinkNext, View, RadialSelected,
+} from 'grommet-icons';
 import { AlignSelfType } from 'grommet/utils';
 import { Repository } from '../../types/repository-search';
 import classes from './repository.module.scss';
@@ -71,13 +73,13 @@ const Badge = ({ BadgeIcon, text, align }: BadgeProps): JSX.Element => {
       pad="xsmall"
       margin="xsmall"
       round
-      width={{min: "30px", max: "150px"}}
-      
+      width={{ min: '30px', max: '150px' }}
+
     >
       {
         renderedIcon()
       }
-      <Text margin={{ horizontal: 'xsmall' }} truncate="tip" >{text}</Text>
+      <Text margin={{ horizontal: 'xsmall' }} truncate="tip">{text}</Text>
     </Box>
   );
 };
@@ -101,7 +103,7 @@ const RepositoryCard = ({
   stars,
   forks,
   openIssues,
-  watchers
+  watchers,
 }: Props) => (
   <Box pad="medium" background="light-2" margin="small" direction="column" className={classes.card}>
     <Box direction="row" justify="start">
@@ -111,36 +113,47 @@ const RepositoryCard = ({
     </Box>
     <Box direction="column">
       {/* @ts-ignore */}
-      <Anchor href={url} label={<Heading level="2" size="small" style={{ wordBreak: 'break-word' }} margin={{bottom: "xsmall"}}>
-        {name}
-      </Heading>} />
-      <Heading level="4" size="small" style={{ wordBreak: 'break-word' }} margin={{vertical: "xxsmall"}}>
-        by {owner}
+      <Anchor
+        href={url}
+        label={(
+          <Heading level="2" size="small" style={{ wordBreak: 'break-word' }} margin={{ bottom: 'xsmall' }}>
+            {name}
+          </Heading>
+)}
+      />
+      <Heading level="4" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall' }}>
+        by
+        {' '}
+        {owner}
       </Heading>
-      
+
     </Box>
 
     <Box direction="row">
-      <Paragraph margin={{vertical: "large"}} >
+      <Paragraph margin={{ vertical: 'large' }}>
         {description}
       </Paragraph>
     </Box>
-    <Box direction="row" >
-      <View  />
-      <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{vertical: "xxsmall", left: "small"}} >
-         Watchers: {watchers}
+    <Box direction="row">
+      <View />
+      <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall', left: 'small' }}>
+        Watchers:
+        {' '}
+        {watchers}
       </Heading>
     </Box>
     <Box direction="row">
-      <RadialSelected  />
-      <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{vertical: "xsmall", left: "small"}}>
-         Open issues: {openIssues}
+      <RadialSelected />
+      <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xsmall', left: 'small' }}>
+        Open issues:
+        {' '}
+        {openIssues}
       </Heading>
     </Box>
     <Box>
       <Button label="To the repo" href={url} alignSelf="end" icon={<LinkNext />} />
     </Box>
-    
+
   </Box>
 );
 
