@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       return <Box> Loading! </Box>;
     }
 
-    if (!data.success || !data.data) {
+    if (!data?.success || !data?.data) {
       return <Box>Error!</Box>;
     }
 
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
       </Box>
       <Box flex>
         {
-          renderViewer()
+          searchTerm && renderViewer()
         }
       </Box>
       {
