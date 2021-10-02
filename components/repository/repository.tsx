@@ -115,11 +115,12 @@ const RepositoryCard = ({
       {/* @ts-ignore */}
       <Anchor
         href={url}
+        target="_blank"
         label={(
           <Heading level="2" size="small" style={{ wordBreak: 'break-word' }} margin={{ bottom: 'xsmall' }}>
             {name}
           </Heading>
-)}
+          )}
       />
       <Heading level="4" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall' }}>
         by
@@ -151,7 +152,7 @@ const RepositoryCard = ({
       </Heading>
     </Box>
     <Box>
-      <Button label="To the repo" href={url} alignSelf="end" icon={<LinkNext />} />
+      <Button label="To the repo" target="_blank" href={url} alignSelf="end" icon={<LinkNext />} />
     </Box>
 
   </Box>
