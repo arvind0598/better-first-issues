@@ -12,6 +12,7 @@
   "dependencies": {
     "@octokit/core": "^3.5.1",
     "@octokit/plugin-rest-endpoint-methods": "^5.10.2",
+    "@types/styled-components": "^5.1.14",
     "grommet": "^2.17.5",
     "grommet-icons": "^4.6.2",
     "next": "11.1.2",
@@ -19,6 +20,7 @@
     "react-dom": "17.0.2",
     "react-masonry-css": "^1.0.16",
     "sass": "^1.41.0",
+    "styled-components": "^5.3.1",
     "swr": "^1.0.1",
     "yaml": "^1.10.2"
   },
