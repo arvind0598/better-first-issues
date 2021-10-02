@@ -129,12 +129,12 @@ const RepositoryCard = ({
 
     </Box>
 
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <Paragraph margin={{ vertical: 'large' }}>
         {description}
       </Paragraph>
     </Box>
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <View />
       <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall', left: 'small' }}>
         Watchers:
@@ -142,7 +142,7 @@ const RepositoryCard = ({
         {watchers}
       </Heading>
     </Box>
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <RadialSelected />
       <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xsmall', left: 'small' }}>
         Open issues:
