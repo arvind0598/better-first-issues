@@ -9,6 +9,8 @@ import MobileNavbar from '../components/navbar/navbar-mobile';
 import useRepoData from '../hooks/use-repo-data';
 import Viewer from '../components/viewer/viewer';
 
+import { Loading, Container, Error } from '../styles/Home/styles';
+
 /**
  * @summary Component to render the landing page.
  *
@@ -39,11 +41,19 @@ const Home: NextPage = () => {
    */
   const renderViewer = () => {
     if (isLoading) {
-      return <Box> Loading! </Box>;
+      return (
+        <Container>
+          <Loading />
+        </Container>
+      );
     }
 
     if (!data?.success || !data?.data) {
-      return <Box>Error!</Box>;
+      return (
+        <Container>
+          <Error>Error</Error>
+        </Container>
+      );
     }
 
     const { data: response } = data;
