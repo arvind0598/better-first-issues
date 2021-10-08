@@ -106,10 +106,14 @@ const RepositoryCard = ({
   watchers,
 }: Props) => (
   <Box pad="medium" background="light-2" margin="small" direction="column" className={classes.card}>
-    <Box direction="row" justify="start">
-      {language && <Badge text={language} />}
-      <Badge BadgeIcon={Star} text={stars} />
-      <Badge BadgeIcon={Network} text={forks} align="start" />
+    <Box direction="row" justify="between">
+      <Box>
+        {language && <Badge text={language} />}
+      </Box>
+      <Box direction="row">
+        <Badge BadgeIcon={Star} text={stars} />
+        <Badge BadgeIcon={Network} text={forks} align="start" />
+      </Box>
     </Box>
     <Box direction="column">
       {/* @ts-ignore */}
@@ -119,7 +123,7 @@ const RepositoryCard = ({
           <Heading level="2" size="small" style={{ wordBreak: 'break-word' }} margin={{ bottom: 'xsmall' }}>
             {name}
           </Heading>
-)}
+        )}
       />
       <Heading level="4" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall' }}>
         by
