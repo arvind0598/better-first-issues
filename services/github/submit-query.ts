@@ -1,6 +1,6 @@
 import { Octokit } from '@octokit/core';
 import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
-import { RepositorySearchOutboundRequest } from '../../types/repository-search';
+import { RepositorySearchOutboundRequest } from '@/types/repository-search';
 
 const MyOctokit = Octokit.plugin(restEndpointMethods);
 const octokit = new MyOctokit({});

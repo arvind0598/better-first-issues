@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import createRepositorySearchQuery from '../../services/github/create-query';
-import getRepositories from '../../services/github/submit-query';
-import { Repository, RepositorySearchResponse } from '../../types/repository-search';
+import createRepositorySearchQuery from '@/services/github/create-query';
+import getRepositories from '@/services/github/submit-query';
+import { Repository, RepositorySearchResponse } from '@/types/repository-search';
 
 /**
  * @summary This function takes search parameters and returns the Github Search API Response.

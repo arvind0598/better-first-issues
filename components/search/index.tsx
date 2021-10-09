@@ -1,7 +1,7 @@
 import { Box, Button, TextInput } from 'grommet';
 import { Search } from 'grommet-icons';
 import { KeyboardEventHandler, useState } from 'react';
-import useResponsiveContext from '../../hooks/use-responsive-context';
+import useResponsiveContext from '@/hooks/use-responsive-context';
 
 type Props = {
   /**

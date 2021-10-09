@@ -1,6 +1,6 @@
 import { promises } from 'fs';
 import YAML from 'yaml';
-import { LanguageConfig } from '../../types/utils';
+import { LanguageConfig } from '@/types/utils';
 
 const getLanguageColorPair = (data: [string, unknown]): [string, string] => (
   [data[0], (data[1] as LanguageConfig).color]

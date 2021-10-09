@@ -1,8 +1,8 @@
 import { Box } from 'grommet';
 import Masonry from 'react-masonry-css';
-import { RepositorySearchData } from '../../types/repository-search';
-import { ScreenWidth } from '../../types/responsive';
-import RepositoryCard from '../repository/repository';
+import { RepositorySearchData } from '@/types/repository-search';
+import { ScreenWidth } from '@/types/responsive';
+import RepositoryCard from '../repository';
 import styles from './viewer.module.scss';
 
 /**
