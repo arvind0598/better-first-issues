@@ -6,7 +6,7 @@ const theme: ThemeType = {
       brand: '#4C4637',
     },
     font: {
-      family: 'Montserrat',
+      family: 'Noto Sans Mono',
     },
   },
 };
