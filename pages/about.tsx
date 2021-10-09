@@ -134,6 +134,7 @@ const About: NextPage = () => {
               </AboutParagraph>
               <AboutParagraph>
                 This project is inspired by
+                {' '}
                 <Anchor label="Good First Issues" href="http://goodfirstissues.com/" />
                 , a similar project by Daren Sin.
               </AboutParagraph>
