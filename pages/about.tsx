@@ -113,7 +113,7 @@ const About: NextPage = () => {
       <Navbar />
       <Box align="center" justify="center" direction="column" pad="large">
         {
-          !isSmaller && <Heading level="1" textAlign={textAlign}>get on with open-source</Heading>
+          !isSmaller && <Heading level="1" textAlign={textAlign}>Get on with Open-Source</Heading>
         }
         <Box align="center" justify="center" direction={flexDirection} pad={boxPadding}>
           <Grid fill columns={columnsLayout[size]} gap="small">
@@ -134,6 +134,7 @@ const About: NextPage = () => {
               </AboutParagraph>
               <AboutParagraph>
                 This project is inspired by
+                {' '}
                 <Anchor label="Good First Issues" href="http://goodfirstissues.com/" />
                 , a similar project by Daren Sin.
               </AboutParagraph>
