@@ -63,14 +63,8 @@ const Home: NextPage = () => {
       <Box flex pad="large" margin="large">
         <SearchForm updateSearchTerm={(term) => setSearchTerm(term)} />
       </Box>
-      <Box flex>
-        {
-          searchTerm && renderViewer()
-        }
-      </Box>
-      {
-        isMobile && <MobileNavbar />
-      }
+      <Box flex>{searchTerm && renderViewer()}</Box>
+      {isMobile && <MobileNavbar />}
     </>
   );
 };
