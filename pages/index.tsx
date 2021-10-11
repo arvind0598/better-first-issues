@@ -1,13 +1,13 @@
 import { Box } from 'grommet';
 import type { NextPage } from 'next';
 import { useState } from 'react';
-import PageHead from '../components/head/head';
-import Navbar from '../components/navbar/navbar';
-import SearchForm from '../components/search/search';
-import useResponsiveContext from '../hooks/use-responsive-context';
-import MobileNavbar from '../components/navbar/navbar-mobile';
-import useRepoData from '../hooks/use-repo-data';
-import Viewer from '../components/viewer/viewer';
+import PageHead from '@/components/head';
+import Navbar from '@/components/navbar';
+import SearchForm from '@/components/search';
+import useResponsiveContext from '@/hooks/use-responsive-context';
+import MobileNavbar from '@/components/navbar/navbar-mobile';
+import useRepoData from '@/hooks/use-repo-data';
+import Viewer from '@/components/viewer';
 
 /**
  * @summary Component to render the landing page.

@@ -6,7 +6,7 @@ import {
   Star, Network, Icon, LinkNext, View, RadialSelected,
 } from 'grommet-icons';
 import { AlignSelfType } from 'grommet/utils';
-import { Repository } from '../../types/repository-search';
+import { Repository } from '@/types/repository-search';
 import classes from './repository.module.scss';
 
 /**

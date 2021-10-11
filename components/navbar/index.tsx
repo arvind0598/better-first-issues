@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import {
   Anchor, Box, Header, Heading,
 } from 'grommet';
-import useResponsiveContext from '../../hooks/use-responsive-context';
+import useResponsiveContext from '@/hooks/use-responsive-context';
 
 type NavbarAnchorProps = {
   /**

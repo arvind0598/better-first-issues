@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ScreenSize, ResponsiveContext } from '../types/responsive';
+import { ScreenSize, ResponsiveContext } from '@/types/responsive';
 
 /**
  * @summary This function returns a string requivalent for a given screen width in pixels.

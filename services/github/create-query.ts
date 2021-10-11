@@ -1,4 +1,4 @@
-import { RepositorySearchFilters } from '../../types/repository-search';
+import { RepositorySearchFilters } from '@/types/repository-search';
 
 const formatQuery = (data: Record<string, string>, name?: string) => {
   const values = Object.entries(data).map(([key, value]) => `${key}=${value}`).join('&');

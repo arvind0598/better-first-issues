@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { RepositorySearchResponse } from '../types/repository-search';
+import { RepositorySearchResponse } from '@/types/repository-search';
 
 type RepoData = {
   data: RepositorySearchResponse;

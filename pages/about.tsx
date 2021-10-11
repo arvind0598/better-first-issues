@@ -3,11 +3,11 @@ import {
   Anchor, Box, Grid, Heading, Image, Paragraph,
 } from 'grommet';
 import { FC } from 'react';
-import PageHead from '../components/head/head';
-import Navbar from '../components/navbar/navbar';
-import useResponsiveContext from '../hooks/use-responsive-context';
-import MobileNavbar from '../components/navbar/navbar-mobile';
-import { Empty } from '../types/utils';
+import PageHead from '@/components/head';
+import Navbar from '@/components/navbar';
+import useResponsiveContext from '@/hooks/use-responsive-context';
+import MobileNavbar from '@/components/navbar/navbar-mobile';
+import { Empty } from '@/types/utils';
 
 /**
  * This object determines how to split the screen between the "image" and the "text"
@@ -134,6 +134,7 @@ const About: NextPage = () => {
               </AboutParagraph>
               <AboutParagraph>
                 This project is inspired by
+                {' '}
                 <Anchor label="Good First Issues" href="http://goodfirstissues.com/" />
                 , a similar project by Daren Sin.
               </AboutParagraph>
