@@ -119,6 +119,7 @@ const RepositoryCard = ({
       {/* @ts-ignore */}
       <Anchor
         href={url}
+        target="_blank"
         label={(
           <Heading level="2" size="small" style={{ wordBreak: 'break-word' }} margin={{ bottom: 'xsmall' }}>
             {name}
@@ -133,12 +134,12 @@ const RepositoryCard = ({
 
     </Box>
 
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <Paragraph margin={{ vertical: 'large' }}>
         {description}
       </Paragraph>
     </Box>
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <View />
       <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xxsmall', left: 'small' }}>
         Watchers:
@@ -146,7 +147,7 @@ const RepositoryCard = ({
         {watchers}
       </Heading>
     </Box>
-    <Box direction="row">
+    <Box direction="row" style={{ alignItems: 'center' }}>
       <RadialSelected />
       <Heading level="6" size="small" style={{ wordBreak: 'break-word' }} margin={{ vertical: 'xsmall', left: 'small' }}>
         Open issues:
@@ -155,7 +156,7 @@ const RepositoryCard = ({
       </Heading>
     </Box>
     <Box>
-      <Button label="To the repo" href={url} alignSelf="end" icon={<LinkNext />} />
+      <Button label="To the repo" target="_blank" href={url} alignSelf="end" icon={<LinkNext />} />
     </Box>
 
   </Box>
